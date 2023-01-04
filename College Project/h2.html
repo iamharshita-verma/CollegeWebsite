@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College website</title>
+    <link rel="stylesheet" href="color.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/lins/animate.css/3.7.2/animate.min.css">
+</head>
+<body> <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --navbar-height:59rem;
+        } 
+        
+        @media only screen and (max-width: 480px){
+            html,body{
+                width: 100%;
+                height: 100%;
+                margin:0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+        }
+
+         @media only screen and (max-width: 800px){
+            .card{
+                width: 90%;
+                height: 90%;
+            }
+        }
+        /* navigation bar */
+      #navbar{
+      display: flex;
+      align-items: center;
+      position: relative;
+      top: -0.1rem;
+    }
+      #navbar::before{
+      content: " ";
+      background-color: black;
+      position: absolute;
+      height : 100%;
+      width: 100%;
+      z-index: -1; 
+      opacity: 0.2;
+
+    }   
+    #logo{
+        margin: 10px 20px;
+    }       
+    #logo img{
+        height: 80px;
+        margin: 1px 3px;
+    }
+    /*  navigation bar: list styling */
+    #navbar{
+      position: relative;
+
+    } 
+    #navbar ul{
+       display: flex;
+       font-family:'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li{
+      list-style: none;
+      font-size: 1.1rem;
+    }
+    #navbar ul li a{
+      color: white;
+      display: block;
+      padding: 3px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+    } 
+    #navbar ul li a:hover{
+        color: white;
+        background : blue;
+    } 
+    #home{
+        display: flax;
+        flex-direction:column;
+        padding: 3px 200px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    #home::before{
+      content: "";
+      position: absolute;
+      background :url('https://media.istockphoto.com/id/1277557066/photo/facade-of-modern-building-at-night.jpg?s=612x612&w=0&k=20&c=HPdFa7DW1D5hAg3OFimQ8RNM9RXUSXGeEhSdGl3Da8s=');
+      position: absolute;
+      border-radius: 0% 0% 10%;
+      height : 70%;
+      width: 100%;
+      z-index: -1; 
+      opacity: 0.84;
+      top: 0%;
+      left: 0%;
+      background-size: cover; 
+    }   
+    #home h1{
+        color: white;
+        text-align: center;
+        font-family: 'Bree Serif',serif;
+    }
+    #home p{
+        color: white;
+        text-align: center;
+        font-size:2rem;
+        font-family: 'Bree Serif',serif;
+    }
+    .btn:hover{
+            transform: scale(1.3);
+            z-index:2;
+    }
+     .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background:transparent;
+        color: white;
+        margin: 17px;
+        text-align: center;
+        font-family: 'arial';
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translateX(-50%) translateY(-50); 
+        font-size: 1rem;
+        border-radius:10px;
+        cursor: pointer;
+        
+    } 
+    .course{                          
+        
+        width:80%;
+        margin: auto;
+        text-align:center;
+        padding-top:100px;
+    }
+    h1{
+        font-size:3px;
+        font-weight:500;
+    }
+    
+    #client-section{                                              /* space between baba and our course */
+        
+         height: -100rem;        
+    }
+    #client-section ::before{                      /* foundaer of our college  ke pecha ka background*/ 
+        margin: 0px;
+        padding: 0px 0px;
+        content: "";  
+        position : absolute; 
+        border-radius: 10%;
+        z-index: -1; 
+        opacity: 0.8;        
+        top: 00%;
+        left: 0.%;
+        justify-content:center;
+        align-items:center;  
+    }
+    
+    h1{
+        color:black;
+        text-align: center;
+        font-size:2rem;
+        font-family: 'Bree Serif',serif;
+    }
+    .container{
+        margin: 0px  auto;
+        width: 100%;
+        padding: 8px 0 0 ;
+    }
+    img{
+        float: left;
+        width: 250px;
+        height: 460px;
+        padding:100 4px  ;
+        opacity: 0.9;}
+    
+    #services.box{ 
+              font-family: 'bree Serif', serif;
+
+
+
+    }
+    .text{
+        text-align: center;
+        font-family: verdana;
+        margin: 0px ;
+        padding: 8px 0 0 ;
+        color: black;
+    }
+    #class{
+        font-size:4;
+    }
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #client-item{
+        padding: 34px;
+        height: 10px;
+        justify-content: center;
+    }
+
+   .center{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'arial';
+        position: relative;
+        border-radius:10px;
+        font-size: 2.5rem;
+        transform: translateX(-50%) translateY(-50); 
+        cursor: pointer;
+        }
+
+       .container{
+        background-color: burlywood;            
+        }
+
+       .box                                          /* how to make box*/ /*sticky 1 ke uper dushri img */          
+       {background-color: rgb(231, 230, 241); 
+        border: 3px solid blue;
+        padding:34px 10px;                                      
+        margin: 14px 15px auto;                                  
+        border-radius: 23px;
+        width: 249px;  
+        height:15;
+       
+        font-size:2rem;
+         position: relative;                                                    
+        right:40px;
+        top:   30px;
+        left: 0;                            
+         display: block; 
+                                               /* height: 10rem;         */
+   
+    } 
+    .box2{background-color: rgb(231, 230, 241); 
+        border: 3px solid blue;
+        padding:34px 10px;                                      
+        margin: 14px 450px auto;                                  
+        border-radius: 23px;
+        width: 249px;  
+        height:-15;
+       
+        font-size:2rem;
+        position: relative;                                                    
+        right:40px;
+        top:   -870px;
+        left: 0;                            
+         display: block;
+                                         /* height: 10rem;    */
+   
+    } 
+    .box3{background-color: rgb(231, 230, 241); 
+        border: 3px solid blue;
+        padding:30px 10px;                                      
+        margin: 14px 450px auto;                                  
+        border-radius: 23px;
+        width: 249px;  
+        height:350;
+       
+        font-size:2rem;
+         position: relative;                                                    
+        right:40px;
+        top:   -1810px;
+        left: 400px;                            
+         display: block; 
+                                        /* height: 10rem;   */
+   
+    } 
+    table{
+        background:url('https://images.unsplash.com/photo-1595327656903-2f54e37ce09b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+        width: 680px;
+        font-size: -0.2rem;
+        border-radius:10px;
+        border: 15px solid rgba(105,55,55,0.3);
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        text-align: center;
+        box-shadow: 2px 2px 15px rgba(0,0,1,0.3);
+        color: white;
+        position: absolute;
+        float: center;
+        padding: 0px;
+        top:-1700px;                                 
+                                                           /* top lgane se table uper cle gye */ 
+    }
+    
+        form#register{
+           margin: 40px;
+           color: white;
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            color: white;
+        }
+        input#name{
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow:insert 1px 1px 5px rgba(0,0,0.3);
+            
+
+        }
+        input#submit{
+            width: 200px;
+            padding: 7px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: sans-serif;
+            border-radius: 3px;
+            background-color: #fa00afcc;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba( 0,0,0,0.3);
+            position: center ;
+             }
+             input:hover{
+             transform: scale(1.3);
+             z-index:2;
+             }
+        
+        #form-sec ::before{
+             margin: 0;
+             padding: 0;
+             content: "";  
+             position : center;      /* absolute;  */
+             background : url(' https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHVycGxlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60');
+             background-size: 280%; 
+             background-position: -400px 0px;
+             }
+    
+
+           body{
+             background : url('https://media.istockphoto.com/id/1344257083/photo/white-bokeh-lights-abstract-background.jpg?b=1&s=170667a&w=0&k=20&c=dppaNlcevHyrim93mqFbehypXdbbxZrqtUmrFH2O7rA=');
+             position: center ;
+             background-size: cover; 
+             padding: 0 10px;
+             height: 180vh;
+              }
+             
+            marquee {
+            color:white;
+            font-display: white;
+             }
+             .h-primary{
+             font-size: 3.8rem;
+             padding: 12px;
+             }
+         .back-video{
+            position:absolute;
+            right:0;
+            bottom:0;
+            z-index: -1;
+         }
+    
+
+
+        
+    </style>
+            
+            <nav id="navbar"> <div id="logo"> 
+<img src="data:image/jpeg;base64,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" alt="My college logo" > </div>
+                <div class= "new-links"><ul>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">About us</a></li>
+                    <li class="item"><a href="#">Activity</a></li>
+                    <li class="item"><a href="#">Placements</a></li></ul></div></nav>
+    <section id="home">
+            <h1 class ="h-primary center" ><h1>Welcome to  our college </h1></h1>
+            <p>S.D COLLEGE OF MANAGEMENT STUDIES! </p>
+            <button class="btn"> Join now</button></section><br><br><br>
+            <marquee behavior="alternate" onmouseover="if (!window.__cfRLUnblockHandlers) return false; this.stop();" onmouseout="if (!window.__cfRLUnblockHandlers) return false; this.start();"><a href="http://sdcamzn.in/Events.aspx?id=9" target="_blank"><b><font size="3">International Webinar - 13th June</font></b></a> || <a href="http://sdcamzn.in/DetailNews.aspx?dn=13" target="_blank"><b><font size="3">HELP DESK CUET 2022 Councelling</font></b></a> || <a href="http://sdcamzn.in/DetailNews.aspx?dn=14" target="_blank"><b><font size="3">Registration open link here</font></b></a>||
+            <a href="http://sdcamzn.in/MadisMCA.aspx" target="_blank"><b><font size="3">Discussion for MCA</font></b></a></marquee><br><br> 
+            <section id="client-section"> 
+            <h1 class = "h-primary center">Founder of S.D College</h1>
+            <div id="clients">
+            <div class="client item">
+            <div class="container">
+            <img src="https://media.istockphoto.com/id/sb10069478w-001/photo/head-teacher-smiling-in-school-corridor-portrait.jpg?b=1&s=170667a&w=0&k=20&c=EF2rCDw4UfBOi2KqF5PhheP-aeF4k-qhWPzz6eE-aa8=" alt="Principle of college">
+            <div class="text"> Sanatan Dharma College was establish in 1916 in Lahore under the leadership of the Indian scholar and educational reformer, Bharat Ratna Mahamana Madan Mohan Malviya, ji.<br> After the partition of the country, the College was re-established in Ambala where the foundation stone was laid by India's first President Dr Rajender Prasad on 3 October 1951. <br>The college has educated many notable alumni including Dr N Vohra, Governor, J & K; Mrs Sushma Swaraj, Minster of External Affairs; Sh Anil Vij, Minister of Health and Sports, Haryana; and Nobel Laureate and Nuclear Physicist, Dr Abdus Salam.<br>The college embraces innovative concepts to prepare students for contemporary global       challenges and looks forward to cooperating with the OERu in achieving these goals.<br>
+             The college is one of the premier institution of Western Uttar Pradesh.<br> It is managed by a registered body viz.<br> S. D. College Association which also supervises several other technical and educational institutes as well as social welfare associations.<br> The college enjoys a glorious past, an impressive present and the vision of a very bright future. <br>‘March Forward’ is not just a slogan here but a time-tested tradition. At present several ambitious projects are on cards and are likely to take shape in near future.<br> The great height that S. D. College has touched and spectacular progress <br>it has recorded in various fields are the result of the selfless service and dedication of several luminaries who are no more.<br>S.D College, Muzaffarnagar is concerned about self-reliant India and follow the mission of Indian Government of “Skill India”.<br><br> The college has opened up a Skill Development Centre under the UGC Scheme of Deen Dayal Upadhyay Centre for Knowledge Acquisition and Upgradation of Skilled Human Ability and livelihood (Kaushal)  </div></div><div></div> </section> </div>
+             <section class="services-container">
+ <h1 class="h-primary center"> Our Cources</h1>
+ <div id="first" >
+ <div class="box">
+                    <img src=" https://media.istockphoto.com/id/1344252956/photo/modern-young-woman-of-asian-ethnicity-e-learning-via-laptop-at-the-modern-and-cozy-cafeteria.jpg?b=1&s=170667a&w=0&k=20&c=4yrXkm7-_mU91z4ITjQ2ji4yMUtc9uP26WsOsSeWeXc="height="14" width="10" alt="student img">
+                    <h2 class =" h-secondary center"> BCA</h2>
+                    <p class="center"><h6>BCA is bachelor's in Computer Application. BCA is a 3-year undergraduate degree programme that focusses on knowledge on the basics of computer application and software development. A BCA degree is considered to be at par with a BTech/BE degree in Computer Science or Information Technology. </h6> </p></div></div>
+                
+                    <div id="second" >
+                        <div class="box2">
+                                           <img src=" https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGIudGVjaCUyMHN0dWRlbnQlMjBpbWd8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" height="14" width="10"alt="student img">
+                                           <h2 class =" h-secondary center"> BBA</h2>
+                                           <p class="center"><h6>BBA is a three-year professional undergraduate course in Business Management. The course is open to students from all three streams i.e., Science, Arts and Commerce. The BBA course offers knowledge and training in management and leadership skills to prepare them for managerial roles and entrepreneurship.. </h6> </p></div></div>
+                        <div id="third" >             
+                        <div class="box3">
+                                             <img src=" https://images.unsplash.com/photo-1592085550638-e6bc180a731e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMzfHxiLnRlY2glMjBzdHVkZW50JTIwaW1nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" height="14" width="10" alt="student img">
+                                             <h2 class =" h-secondary center"> BSc</h2>
+                                             <p class="center"><h6>B.Sc. or Bachelor of Science is an undergraduate degree of three years duration which is universally offered across institutes and universities across India. B. Sc. is one of the most popular courses opted for by students who have a flair for scientific aptitude and zeal for research-oriented.</h6> </p>
+                                             </section></section>  
+
+
+     
+             <section id="form-sec">
+             <div class="main">
+             <div class ="registration"></div>
+             <table class="center">
+             <section id="registration-form"></section>
+             <section><th colspan="3">Student Registration form </th>
+             <form><tr> <td>
+                Student name :
+    </td><td>  
+                <form action="/action.php">
+                <input type ="text" placeholder= "Student name" name=""></form>
+    </td></tr><br>
+    <tr> <td>
+                Father Name :
+    </td><td>   <br><br>
+                <form action="/action.php">
+                <input type ="text" placeholder= "Father Name" name=""></form>
+    </td></tr><br>
+    <tr> <td>
+                 Student Age :
+    </td><td>   
+                <form action="/action.php">
+                <input type ="Age" placeholder= "Student Age" name=""></form></td></tr>
+    <tr><td><br>
+                Gender :
+    </td><td>   <input type="radio" value = "Male"  name="Gender">Male 
+                 <input type="radio" value= "female" name="Gender">Female 
+    </td></tr> 
+    <tr><td>
+                Email :
+    </td><td>    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 <form action="/action.php">
+                    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 <input type="mail"  placeholder="Email" name=""></form>
+    </td></tr>
+    <tr><td>
+               Password :
+    </td><td>     &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 <form action="/action.php">
+                 <input type="Password" placeholder="Password "name=""></form>
+    </td> </tr>
+    <tr><td>
+                Phone no :
+    </td>               &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <td><select>        <option>977</option>
+                        <option>978</option>
+                        <option>979</option>
+                        <option>990</option>
+                        <option>982</option>
+                        <option>983</option>
+        </select>  <form action="/action.php">
+                  <input type="Phone" placeholder="9897******" name=""></form>
+    </td></tr>
+    <tr> <td>
+                 Previous year per:
+    </td><td>    
+                 <form action="/action.php">
+                 <input type ="percentage" placeholder= "Previous year percentage" name=""></form>
+    </td></tr>
+             
+    <tr><td>     <form action="/action.php">
+                 <imput type="text" placeholder="Write something about our college">
+    </form>
+                 <input type ="text" placeholder= "Write something about our college" name=" "> 
+    </td></tr>
+    <tr> <td>   
+                <input type="Submit" value="Submit"  name="" id="submit"> 
+    </td></tr> </form>   </section></section>
+    </table></div></section>
+   <section></head></body></html>
